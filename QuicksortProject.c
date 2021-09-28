@@ -5,8 +5,12 @@ typedef struct arrayOne {
 	int thisArray;
 } IntArray;
 
+void printArray(IntArray *array) {
+	printf("%i ", array->thisArray);
+	printf("\n");
+}
 
-quick_sort(int lo, int hi) {
+void quick_sort(int lo, int hi) {
 	//return from smallest case of one element subproblem
 
 	//choose the first element of the subproblem array section
@@ -27,7 +31,7 @@ quick_sort(int lo, int hi) {
 	//}
 	//recurse and sort elements smaller than pivot
 	//recurse and sort elements larger than pivot
-
+	
 }
 
 
@@ -35,11 +39,9 @@ quick_sort(int lo, int hi) {
 
 int main() {
 	IntArray intArray[] = {30, 20, 50, 10, 40};
-	int i;
-	for(i=0; i<5; i++) {
-		printf("%i ", intArray[i]);
-	}
-	printf("\n");
+
+	printArray(intArray);
+
 
 	//run quicksort()
 	return 0;
