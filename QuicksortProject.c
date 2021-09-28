@@ -13,14 +13,22 @@ void printArray(IntArray *array) {
 	}
 	printf("\n");
 }
-void swap_element(IntArray *array, int element1, int element2) {
+void swap_elements(IntArray *array, int element1, int element2) {
 	int temp[5];
 	int i;
 	for(i=0; i<5; i++) {
 		temp[i] = (*array).thisArray;
 		array++;
 	}
-	printf("%i\n", temp[1]);
+	int t;
+	t = temp[element1];
+	temp[element1] = temp[element2];
+	temp[element2] = t;
+
+	for(i=0; i<5; i++) {
+		printf("%i ", temp[i]);
+	}
+	printf("\n");
 }
 
 void quick_sort(IntArray *array, int lo, int hi) {
@@ -31,7 +39,7 @@ void quick_sort(IntArray *array, int lo, int hi) {
 		array++;
 	}
 	int pivot_element = temp[0];
-	printf("%i\n", pivot_element);
+	//printf("%i\n", pivot_element);
 
 	int left = lo; //indices [lo...left-1] elements less than pivot
 	int right = hi; //indices [right+1...hi] greater than pivot
@@ -58,13 +66,13 @@ void quick_sort(IntArray *array, int lo, int hi) {
 int main() {
 	IntArray intArray[] = {30, 20, 50, 10, 40};
 
-	//printArray(intArray);
+	printArray(intArray);
 
 
 	//run quicksort()
 
-	swap_element(intArray,1,1);
-	quick_sort(intArray,1,1);
+	swap_elements(intArray,0,1);
+	//quick_sort(intArray,1,1);
 
 	return (EXIT_SUCCESS);
 }
