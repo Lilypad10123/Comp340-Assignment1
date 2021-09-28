@@ -1,7 +1,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-//struct
+typedef struct arrayOne {
+	int thisArray;
+} IntArray;
+
 
 quick_sort(int lo, int hi) {
 	//return from smallest case of one element subproblem
@@ -31,6 +34,12 @@ quick_sort(int lo, int hi) {
 
 
 int main() {
+	IntArray intArray[] = {30, 20, 50, 10, 40};
+	int i;
+	for(i=0; i<5; i++) {
+		printf("%i ", intArray[i]);
+	}
+	printf("\n");
 
 	//run quicksort()
 	return 0;
