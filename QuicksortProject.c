@@ -8,7 +8,7 @@ typedef struct arrayOne {
 void printArray(IntArray *array) {
 	int i;
 	for(i=0; i<5; i++) {
-		printf("%i ", array->thisArray);
+		printf("%i ", (*array).thisArray);
 		array++;
 	}
 	printf("\n");
