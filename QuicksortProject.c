@@ -13,15 +13,29 @@ void printArray(IntArray *array) {
 	}
 	printf("\n");
 }
+void swap_element(IntArray *array, int element1, int element2) {
+	int temp[5];
+	int i;
+	for(i=0; i<5; i++) {
+		temp[i] = (*array).thisArray;
+		array++;
+	}
+	printf("%i\n", temp[1]);
+}
 
-void quick_sort(int lo, int hi) {
-	//return from smallest case of one element subproblem
-
-	//choose the first element of the subproblem array section
+void quick_sort(IntArray *array, int lo, int hi) {
+	int temp[5];
+	int i;
+	for(i=0; i<5; i++) {
+		temp[i] = (*array).thisArray;
+		array++;
+	}
+	int pivot_element = temp[0];
+	printf("%i\n", pivot_element);
 
 	int left = lo; //indices [lo...left-1] elements less than pivot
 	int right = hi; //indices [right+1...hi] greater than pivot
-	int i = lo + 1; //indices [left... i-1] equal to pivot element
+	int j = lo + 1; //indices [left... i-1] equal to pivot element
 	// indices [i...right] elements not yet compared against pivot
 
 	//loop until index i increments past index right
@@ -35,7 +49,7 @@ void quick_sort(int lo, int hi) {
 	//}
 	//recurse and sort elements smaller than pivot
 	//recurse and sort elements larger than pivot
-	
+
 }
 
 
@@ -44,9 +58,13 @@ void quick_sort(int lo, int hi) {
 int main() {
 	IntArray intArray[] = {30, 20, 50, 10, 40};
 
-	printArray(intArray);
+	//printArray(intArray);
 
 
 	//run quicksort()
-	return 0;
+
+	swap_element(intArray,1,1);
+	quick_sort(intArray,1,1);
+
+	return (EXIT_SUCCESS);
 }
