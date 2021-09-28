@@ -6,7 +6,11 @@ typedef struct arrayOne {
 } IntArray;
 
 void printArray(IntArray *array) {
-	printf("%i ", array->thisArray);
+	int i;
+	for(i=0; i<5; i++) {
+		printf("%i ", array->thisArray);
+		array++;
+	}
 	printf("\n");
 }
 
