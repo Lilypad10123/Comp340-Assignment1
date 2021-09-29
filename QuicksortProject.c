@@ -1,3 +1,6 @@
+//Assignment 1 - unfinished :(
+//Julia Wosnack 300114746
+
 #include <stdlib.h>
 #include <stdio.h>
 
